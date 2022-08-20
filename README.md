@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next JS, Redux Toolkit, Typescript Boilerplate
 
-## Getting Started
+Next JS, Typescript, Redux Toolkit boilerplate with Axios.
 
-First, run the development server:
+## Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Node.js > 12](https://nodejs.org) and yarn (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Base dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- [@reduxjs/toolkit](https://redux-toolkit.js.org/) for managing global state.
+- [Axios](https://github.com/axios/axios) for networking.
+- [Typescript](https://www.typescriptlang.org/) to type-check components exposed properties.
+- [react-hook-form](https://react-hook-form.com/) for managing form state.
+- [redux-persist](https://github.com/rt2zz/redux-persist) as persistance layer.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can start by cloning this repository. After that you should proceed as with any javascript project:
 
-## Learn More
+- Go to the project's root folder and run `yarn install` or `npm install`.
+- Run `yarn dev` or `npm run dev` to start the development server!
 
-To learn more about Next.js, take a look at the following resources:
+## Folder structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This template follows a very simple project structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `components`: Folder to store any common component that we use through your app (such as a generic button)
+- `pages`: All the application pages.
+- `public`: Folder to store the publicly accessible files.
+- `redux`: This folder should have all our reducers, and expose the combined result using its `rootReducer.ts`
+  - `slices`: Folder that contains all redux slices.
+- `services`: Folder to store your network related services.
+- `styles`: Folder to store all the styling.
+- `@types` This folder contains all the types.
